@@ -72,15 +72,8 @@ void somaPolinomio(int polinomio1[], int grau1, int polinomio2[], int grau2, int
     int soma;
     for(int i = 0; i <= grau1; i++){
         for(int j = 0; j <= grau2; j++){
-            int expoente = grauMaior - i;
-            if(grau1 < grau2){
-                polinomio1[grau1] = 0;
-            }
-            else if(grau2 < grau1){
-                polinomio2[grau2] = 0;
-            }
             soma = polinomio1[i] + polinomio2[j];
-            vres[expoente] = soma;
+            vres[grauMaior] = soma;
         }
     }
 
