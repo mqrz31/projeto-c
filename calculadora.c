@@ -86,17 +86,19 @@ double calculaPolinomio(int poli[], int grau, double x) {
 // Função para somar dois polinômios e armazenar o resultado em vres
 void somaPolinomio(int poli1[], int grau1, int poli2[], int grau2, int vres[], int grauMaior) {
 
+    // Percorre o vetor e declara os coeficientes 1 e 2
     for (int i = 0; i <= grauMaior; i++) {
         int coef1;
         int coef2;
 
+    // Condição para atribuir o valor contido no indice i do polinomio 1 ao coeficiente 1     
         if (i <= grau1) {
             coef1 = poli1[i];
         } 
         else {
             coef1 = 0;
         }
-
+    // Condição para atribuir o valor contido no indice i do polinomio 2 ao coeficiente 2     
         if (i <= grau2) {
             coef2 = poli2[i];
         } 
@@ -108,7 +110,7 @@ void somaPolinomio(int poli1[], int grau1, int poli2[], int grau2, int vres[], i
     }
 }
 
-// Função para multiplicar dois polinômios e armazenar o resultado de forma simplificada
+
 // Função para multiplicar dois polinômios e armazenar o resultado simplificado
 void multiplicaPolinomios(int poli1[], int poli2[], int grau1, int grau2, int vres[]) {
     int grauRes = grau1 + grau2;
