@@ -11,6 +11,6 @@ double calculaPolinomio(int polinomio[], int grau, double x);
 
 void somaPolinomio(int polinomio1[], int grau1, int polinomio2[], int grau2, int vres[], int grauMaior);
 
-
+void multiplicaPolinomios(int poli1[], int poli2[], int grau1, int grau2, int vres[]);
 
 #endif
