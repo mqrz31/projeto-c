@@ -128,8 +128,12 @@ int main() {
             imprimePolinomio(vres,grauRes);
             break;
         }
+        else if(escolha == 4){
+            printf("Encerrando...");
+            break;
+        }
         else{
-            printf("Opção inválida!");
+            printf("Opção inválida!\n");
         }  
     }
     return 0; // Indica que o programa foi executado com sucesso
