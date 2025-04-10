@@ -5,7 +5,7 @@
 int menu() {
     int escolha;
     printf("==== Calculadora de Polinômios ====\n");
-    printf("(1) Calcular Polinômio \n(2) Somar Polinômios \n(3) Multiplicar Polinômios\n");
+    printf("(1) Calcular Polinômio \n(2) Somar Polinômios \n(3) Multiplicar Polinômios\n(4) Encerrar\n");
     printf("Escolha uma das opções: ");
     scanf("%d", &escolha);
     return escolha; // Retorna a opção escolhida pelo usuário
@@ -110,12 +110,11 @@ void somaPolinomio(int poli1[], int grau1, int poli2[], int grau2, int vres[], i
     }
 }
 
-
-// Função para multiplicar dois polinômios e armazenar o resultado simplificado
+// Função para multiplicar dois polinômios
 void multiplicaPolinomios(int poli1[], int poli2[], int grau1, int grau2, int vres[]) {
     int grauRes = grau1 + grau2;
 
-    // Inicializa o polinômio resultante com coeficientes zerados
+    // Inicializa com zeros
     for (int i = 0; i <= grauRes; i++) {
         vres[i] = 0;
     }
@@ -123,7 +122,8 @@ void multiplicaPolinomios(int poli1[], int poli2[], int grau1, int grau2, int vr
     // Multiplica cada termo de poli1 por cada termo de poli2
     for (int i = 0; i <= grau1; i++) {
         for (int j = 0; j <= grau2; j++) {
-            vres[i + j] += poli1[i] * poli2[j];
+            int grauAtual = (grau1 - i) + (grau2 - j);
+            vres[grauRes - grauAtual] += poli1[i] * poli2[j];
         }
     }
 }
